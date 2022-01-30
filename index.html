@@ -1,0 +1,687 @@
+INICIO DEL CURSO DE JAVASCRIPT, IRE ANOTANDO TODAS LAS CARACTERISTICAS DE ESTE LENGUAJE Y UNOS EJEMPLOS PARA LUEGO PRACTICAR Y RECORDAR QUE HACIA CADA COSA
+ 
+<script>
+    /* **********     Curso JavaScript: 3. Variables: var 🥊VS🥊 let - #jonmircha     ********** */
+
+    /* var hola = "Hola Mundo";
+    let hello = "Hello World";
+    console.log(hola);
+    console.log(hello);
+    console.log(window);
+    console.log(window.hola);
+    console.log(window.hello); */
+    //Ambito de bloque
+    //Esto es un bloque - comentario de una lines
+    /*
+    Esto
+    es
+    un
+    comentario
+    de
+    varias
+    líneas */
+    /* console.log ("****************var*****************");
+    var musica = "Rock";
+    console.log("Variable Música antes del Bloque", musica);
+    {
+      var musica = "Pop";
+      console.log("Variable Música dentro del Bloque", musica);
+    }
+    console.log("Variable Música después del Bloque", musica);
+    console.log("****************let*****************");
+    let musica2 = "Rock";
+    console.log("Variable Música antes del Bloque", musica2);
+    {
+      let musica2 = "Pop";
+      console.log("Variable Música dentro del Bloque", musica2);
+    }
+    console.log("Variable Música después del Bloque", musica2); */
+
+
+
+
+
+    /* **********     Curso JavaScript: 4. Constantes (const) - #jonmircha     ********** */
+
+    /*  let a;
+     const PI = 3.1416;
+     //const NUEVE;
+     console.log(PI);
+     //PI = 3.15;
+     a = "kenai";
+     console.log(a);
+     const objeto = {
+       nombre: "Jon",
+       edad: 35
+     }
+     const colores = ["blanco", "negro", "azul"];
+     console.log(objeto);
+     console.log(colores);
+     objeto.correo = "jonmircha@gmail.com";
+     colores.push("anaranjado");
+     console.log(objeto);
+     console.log(colores); */
+
+
+
+
+
+    /* **********     Curso JavaScript: 5. Cadenas de Texto (Strings) - #jonmircha     ********** */
+
+    /*
+        //Cadenas de Texto aka Strings
+        let nombre = "Jon";
+        let apellido = 'MirCha';
+        let saludo = new String("Hola Mundo");
+        let lorem = "       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est, et dolorum. Adipisci sequi, voluptates accusamus earum magnam non pariatur odit consequuntur dicta modi. Quam soluta aliquid nam ea quod dolore.      ";
+        console.log(nombre, apellido, saludo);
+        console.log(
+          nombre.length,
+          apellido.length,
+          saludo.length,
+          nombre.toUpperCase(),
+          apellido.toLowerCase(),
+          lorem.includes("amet"),
+          lorem.includes("jon"),
+          lorem,
+          lorem.trim(),
+          lorem.split(" "),
+          lorem.split(",")
+        );
+     */
+
+
+
+
+
+    /* **********     Curso JavaScript: 6. Template Strings - #jonmircha     ********** */
+
+    /* let nombre = "Jon";
+    let apellido = "MirCha";
+ */
+    //Concatenación
+    //let saludo = "Hola mi nombre es " + nombre + " " + apellido + ".";
+    //console.log(saludo);
+
+    //Interpolción de variables
+    //Template String
+    /* let saludo2 = `Hola mi nombre es ${nombre} ${apellido}.`;
+    console.log(saludo2);
+    let ul = "<ul>< li > Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul > ";
+    console.log(ul);
+    let ul2 = `
+      <ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+    </ul>
+    `;
+    console.log(ul2);
+    let ul3 = "<ul>";
+    ul3 += "<li> Primavera</li>";
+    ul3 += "<li>Verano</li>";
+    ul3 += "<li>Otoño</li>";
+    ul3 += "<li>Invierno</li>";
+    ul3 += "</ul>";
+    console.log(ul3);
+ */
+
+
+
+
+
+    /* **********     Curso JavaScript: 7. Números (Numbers) - #jonmircha     ********** */
+
+    /* let a = 2;
+    let b = new Number(1);
+    let c = 7.19;
+    let d = "5.6";
+    console.log(a, b);
+    console.log(c.toFixed(1));
+    console.log(c.toFixed(5));
+    console.log(parseInt(c));
+    console.log(parseFloat(c));
+    console.log(typeof c, typeof d);
+    console.log(a + b);
+    console.log(c + parseInt(d));
+    console.log(c + parseFloat(d));
+    console.log(c + Number.parseInt(d));
+    console.log(c + Number.parseFloat(d)); */
+
+
+
+
+
+    /* **********     Curso JavaScript: 8. Booleans - #jonmircha     ********** */
+
+    /* let verdadero = true;
+    let falso = false;
+    let v = Boolean(true);
+    let f = Boolean(false);
+    console.log(verdadero, falso, v, f);
+    console.log(typeof verdadero, typeof falso);
+    console.log(Boolean(0));
+    console.log(Boolean(-7));
+    console.log(Boolean(""));
+    console.log(Boolean(" ")); */
+
+
+
+
+
+    /* **********     Curso JavaScript: 9. undefined, null & NaN - #jonmircha     ********** */
+
+    //undefined indica que no se ha inicializado una variable y que el valor está ausente
+    /* let indefinida;
+    console.log(indefinida); */
+
+    //null es un valor especial que indica la ausencia de un valor
+    /* let nulo = null;
+    console.log(null); */
+
+    //NaN - Not a Number
+    /* let noEsUnNumero = "hola" * 3.7;
+    console.log(noEsUnNumero); */
+
+
+
+
+    /* **********     Curso JavaScript: 10. Funciones - #jonmircha     ********** */
+
+    /*
+    Una función es un bloque de código, autocontenido, que se puede definir una vez y ejecutar en cualquier momento. Opcionalmente, una función puede aceptar parámetros y devolver un valor.
+    Las funciones en JavaScript son objetos, un tipo especial de objetos:
+    Se dice que las funciones son ciudadanos de primera clase porque pueden asignarse a un valor, y pueden pasarse como argumentos y usarse como un valor de retorno.
+    */
+
+    //Declaración de función
+    /*  function estoEsUnaFuncion() {
+       console.log("Uno");
+       console.log("Dos");
+       console.log("Tres");
+     } */
+
+    //Invocación de función
+    /* estoEsUnaFuncion();
+    estoEsUnaFuncion();
+    estoEsUnaFuncion();
+    estoEsUnaFuncion(); */
+
+    //  function unaFuncionQueDevuelveValor() {
+    //   console.log("Uno");
+    //   return 19;
+    //   console.log("Dos");
+    //   console.log("Tres");
+    //   return "La función ha retornado una Cadena de texto";
+    // } 
+
+    // let valorDeFuncion = unaFuncionQueDevuelveValor();
+
+    // console.log(valorDeFuncion);
+
+    //  function saludar(nombre = "Desconocido", edad = 0) {
+    //    console.log(`Hola mi nombre es ${nombre} y tengo ${edad} años.`);
+    //  } 
+
+    //saludar("kEnAi", 7);
+    //saludar();
+
+    //Funciones declaradas VS funciones expresadas
+
+    //funcionDeclarada();
+
+    // function funcionDeclarada() {
+    //   console.log("Esto es un función declarada, puede invocarse en cualquier parte de nuestro código, incluso antes de que la función sea declarada");
+    // } 
+
+    //funcionDeclarada();
+
+    //funcionExpresada();
+
+    //función anónima
+    //  const funcionExpresada = function () {
+    //   console.log("Esto es una función expresada, es decir, una función que se le ha asignado como valor a una variable, si invocamos esta función antes de su definición JS nos dirá 'Cannot access 'funcionExpresada' before initialization'")
+    // } 
+
+    //funcionExpresada();
+
+
+	//////    AREGLOS CURSO JAVASCRIPT
+
+	// const a = [];
+	// const b = [1, true, "hola", ["A", "B", "C"]];
+	// console.log(a);
+	// console.log(b.length);
+	// console.log(b[2]);
+	// console.log(b[3][2]);
+
+	// const c = Array.of("x", "y", "z", 9, 8, 7);
+	// console.log(c);
+
+	// const d = Array(20).fill(0);
+	// console.log(d);
+
+	// const colores = ["rojo", "verde", "azul"];
+	// console.log(colores);
+
+	// colores.push("negro");
+	// console.log(colores);
+
+	// colores.pop();
+	// console.log(colores);
+
+	// const numeros = [1, 2, 3, 4, 5];
+	
+	// for (let i = 0; i < numeros.length; i++) {
+		
+	// 	console.log(numeros[i]);
+	// }
+
+	// let myCadena = 'danilo, antoio, macea, santos';
+
+	// let myArray = myCadena.split(',');
+	// console.log(myArray.length-1);
+
+	// colores.toString();
+	// console.log(colores);
+
+	// colores.forEach(function (el, index) {
+	// 	console.log(`<li id="${index}">${el}</li>`);
+	// })
+
+
+
+	/// OBJETOS CURSO DE PROGRAMACION CON JAVASCRIPT
+
+
+	/* dentro de un objeto a las varibles de les van a llamar atributos/propiedades y a las funciones se les llama metodos */
+
+	// const b = {
+	// 	nombre: "danilo",
+	// 	apellio: "macea",
+	// 	edad: 22,
+	// 	solter: false,
+	// 	conctato: {
+	// 		email: "xxxdndkxx@gmail.com",
+	// 		movil: 3233878460
+	// 	},
+	// 	saludar:function(){
+	// 		console.log("hola");
+	// 	},
+	// 	decirMinombre:function(){
+	// 		console.log(`hola me llamo ${this.nombre} ${this.apellio} y tengo ${this.edad} años`)
+	// 	}
+	// }
+
+	// console.log(b);
+	// console.log(b["nombre"]);
+	// console.log(b.saludar());// imprimir valores espesificos de un objeto
+	// console.log(b.conctato.email); //acceder a valores que hay de un objeto dentro de otro objeto;
+	// b.decirMinombre();
+
+
+
+
+  /// destructuracion curso javascript
+
+  // const animes = {
+  //   romance: "golden time",
+  //   drama: "life",
+  //   comedia: "konosuba",
+  //   isekai: "SAO"
+  // }
+
+  // const {romance, drama, comedia, isekai} = animes
+
+  // console.log(romance, drama, comedia, isekai);
+
+
+  // OBJETOS LITERALES CURSO DE JAVASCRIOT
+  // const dog = {
+  //   nombre,
+  //   edad,
+  //   apellidos,
+  //   saludar(){
+  //     console.log("hola");
+  //   }
+  // }
+
+
+  //PROTOTIPOS CURSO JAVASCRIPT 
+
+  /*
+  clases = modelo a seguir.
+  objetos = es una instancia de una clase
+  atributos = es una caracteristicas o propiedad del objeto (son variables dentro de un objeto)
+  metodos = son las acciones que un objeto puede realizar(son funciones dentro de un objeto)
+  */
+
+    // //FUNCION CONSTRUCTORA
+    // function Animal (nombre, genero) {
+    //   //atributos
+    //   this.nombre = nombre;
+    //   this.genero = genero;
+
+    //   //metodos
+    //   this.sonar = function(){
+    //     console.log("hago sonidos porque estoy vivo");
+    //   }
+    // }
+
+    // const snoopy = new Animal("snoopy", "macho"),
+    // lolaBunny = new Animal("lola bunny", "hembra");
+
+    // console.log(snoopy);
+    // console.log(lolaBunny);
+
+
+
+    //funcion contructora donde asiganmos los metodos al prototipo, no a la funciona como tal
+
+    // function Animal (nombre, genero) {
+    //   //atributos
+    //   this.nombre = nombre;
+    //   this.genero = genero;
+
+    
+    // }
+    //   //  metodos agregados al prototipo de la funcion contructora
+    //    Animal.prototype.sonar = function () {
+    //      console.log("hago sonidos porque estoy vivo");
+    //    }
+
+
+
+    //herencia prototipica
+
+    // function Perro(nombre, genero, tamano){
+    //   this.super = Animal;
+    //   this.super(nombre, genero);
+    //   this.tamano = tamano;
+    // }
+
+    // Perro.prototype = new Animal();
+    // Perro.prototype.constructor = Perro;
+
+    // Perro.prototype.sonar = function (){
+    //   console.log("ladrido de perro");
+    // }
+    // Perro.prototype.ladrar = function(){
+    //   console.log("guau guau")
+    // }
+
+    // const snoopy = new Perro("snoopy", "macho", "mediano"),
+    //    lolaBunny = new Animal("lola bunny", "hembra");
+
+    // console.log(snoopy);
+    // console.log(lolaBunny);
+
+    // snoopy.sonar();
+
+
+    // CLASES CURSO DE JAVASCRIPT
+
+     //class Animal {
+      //el constructor es un metodo especial que se ejecuta en el momento de instanciar la clase
+      //constructor(nombre, genero){
+      //atributos
+    //   this.nombre = nombre;
+    //   this.genero = genero;
+
+    
+    // }
+
+    //metodos
+  //   sonar(){
+  //     console.log("hago sonidos porque estoy vivo");
+  //   }
+
+  //   saludar(){
+  //     console.log(`hola me llamo ${this.nombre}`)
+  //   }
+  // }
+  // class Perro extends Animal {
+  //   constructor(nombre, genero, tamano){
+  //     //con el metodo super() se manda a llamar el contructor de la clase padre
+  //     super(nombre, genero);
+  //     this.tamano = tamano;
+  //     this.raza = null
+
+  //   }
+  //   sonar(){
+  //     console.log("soy un perro");
+  //   }
+  //   ladrar(){
+  //     console.log("guauu guauuu")
+  //   }
+
+  //    static queEres(){
+  //     console.log("los peeros son los mejores amigos del hombre")
+  //   }
+
+    //los setters y getters son metodos especiales que nos permiten establecer y obtener los valores de atributos de nuestra clase
+
+  //   get getRaza(){
+  //     return this.raza;
+  //   }
+
+  //   set setRaza(raza){
+  //     this.raza = raza;
+  //   }
+
+
+
+  // }
+
+  // Perro.queEres();
+
+
+
+  // const mimi = new Animal("mimi", "hembra"),
+  // scoby = new Perro("scoby", "macho", "gigante");
+
+  // console.log(mimi);
+  // mimi.saludar();
+  // mimi.sonar();
+  // console.log(scoby);
+  // scoby.sonar();
+  // scoby.saludar();
+  // scoby.ladrar();
+  // console.log(scoby.getRaza)
+  // scoby.setRaza = "gran danez";
+  // console.log(scoby.getRaza);
+
+
+  //ejersicio de clases javascript
+
+  // class NavesPg{
+  //   constructor (nombre, tipo){
+  //     this.nombre = nombre;
+  //     this.tipo = tipo
+  //   }
+  //   NavesInfo(){
+  //     console.log(`naves pirate galaxy nombre: ${this.nombre}, tipo: ${this.tipo} `);
+  //   }
+
+  //   //un metodo estatico se pueden ejecutar sin necesidad de instanciar la clase
+  //   static queEres(){
+  //     console.log("soy una nave")
+  //   }
+
+  // }
+
+  // class Costo extends NavesPg{
+  //   constructor(nombre, tipo, costo){
+  //     super(nombre, tipo);
+  //     this.costo = costo;
+  //   }
+  //   NavesInfo(){
+  //     console.log(`naves pirate galaxy con nombre: ${this.nombre}, tipo: ${this.tipo}, y precio: ${this.costo}`)
+  //   }
+  // }
+
+  // NavesPg.queEres()
+
+  // const listar = new NavesPg("marstone", "ravens"),
+  //       n2 = new Costo("obsidian", "ravens", "1.500.000");
+
+  //       console.log(listar);
+  //       console.log(n2);
+  //       listar.NavesInfo();
+  //       n2.NavesInfo();
+
+
+  //DATE
+
+
+
+  // const fecha = new Date();
+  // console.log(fecha);
+  // console.log(fecha.getDate());
+  // console.log(fecha.getDay());
+  // console.log(fecha.getMonth());
+  // console.log(fecha.getFullYear());
+  // console.log(fecha.toDateString());
+  // console.log(fecha.toLocaleDateString());
+  // console.log(fecha.getUTCDate());
+  // console.log(fecha.getUTCHours());
+  // console.log(Date.now());
+
+  // let cumpledanilo = new Date(1999, 4, 17);
+  // console.log(cumpledanilo)
+
+
+  //OBJETO MATH
+  // console.log(Math);
+  // console.log(Math.abs(7.8));
+  // console.log(Math.ceil(7.8));
+  // console.log(Math.floor(7.8));
+  // console.log(Math.round(7.4));
+  // console.log(Math.sqrt(80));
+  // console.log(Math.pow(2,5));
+  // console.log(Math.sign(-7.5));
+  // console.log(Math.round(Math.random()*1000));
+
+
+  //OPERADORES DE CORTO CIRCUITO  CURSO DE JAVASCRIPT
+  /*
+  cortocircuito OR - cuando el valor de la izquierda en  la expresion sempre pueda validar a true, es el valor que se cargara por defecto
+
+  cortocircuito AND - cuando el valor de la izquierda en la expresion siempre pueda validar a false, es el valor que se cargara por defecto
+
+   */
+  // function saludar(nombre){
+  //   nombre = nombre || "desconocido";
+  //   console.log(`hola ${nombre}`)
+  // }
+
+  // saludar("danilo")
+
+  // console.log("cadena" || "otra cadena")
+  // console.log(true || "otra cadena")
+
+  // console.log(true && "valor")
+
+    //ALERT, CONFIRM Y PROMPT CURSO JAVASCRIPT
+    // window.alert("hola esto es una alerta");
+    // window.confirm("hola esto es una confirmacion");
+    // window.prompt("hola esto es un prompt y le permite al usuario ingresar un valor");
+
+    // let alerta = alert("hola esto es una alerta");
+
+    // let confirmacion = confirm("hola esto es una confirmacion");
+
+    // let aviso = prompt("hola esto es un prompt y le permite al usuario ingresar un valor");
+
+
+    // console.log(alerta);
+    // console.log(confirmacion);
+    // console.log(aviso);
+
+
+    //EXPRESIONES REGULARES CURSO JAVASCRIPT
+    // let cadena = "lkjasakdñal lorem lekjan calkjc"
+    // let expReg = new RegExp("lorem", "ig"/*bandera anti mayusculas*/);
+    // let expReg2 = /lorem/ig;
+
+    // console.log(expReg.test(cadena));
+    // console.log(expReg.exec(cadena))
+
+
+    //FUNCION ANONIMA AUTOEJECUTABLE
+    (function (d, w, c){
+      console.log("funcion anonima autoejecutable");
+    })();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+  
+
+  
+
+
+   
+        
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+</script>
+
+
